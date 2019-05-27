@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remote name="yocto-project" fetch="git://git.yoctoproject.org"/>
+    <remote name="openembedded" fetch="git://git.openembedded.org"/>
+    <remote name="github" fetch="http://github.com"/>
+
+    <project name="poky" remote="yocto-project" revision="master" />
+    <project name="meta-raspberrypi" remote="yocto-project" revision="master" path="poky/meta-raspberrypi"/>
+    <project name="meta-openembedded" remote="openembedded" revision="master" path="poky/meta-openembedded" />
+    <project name="chrusel/meta-distro" remote="github" revision="master" path="poky/meta-distro">
+        <copyfile src="templateconf" dest="poky/.templateconf" />
+    </project>
+</manifest>
+

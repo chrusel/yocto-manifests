@@ -1,6 +1,6 @@
 # 1. How To Build
 
-## 1.1 Prerequisite
+## 1.1 Prerequisite (Ubuntu 18.04)
 
 Required Tools and Packages:
 

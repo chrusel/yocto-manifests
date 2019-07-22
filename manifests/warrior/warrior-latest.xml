@@ -4,11 +4,12 @@
     <remote name="openembedded" fetch="git://git.openembedded.org"/>
     <remote name="github" fetch="http://github.com"/>
 
-    <project name="poky" remote="yocto-project" revision="warrior" />
-    <project name="meta-raspberrypi" remote="yocto-project" revision="warrior" path="poky/meta-raspberrypi"/>
-    <project name="meta-openembedded" remote="openembedded" revision="warrior" path="poky/meta-openembedded" />
-    <project name="chrusel/meta-distro" remote="github" revision="master" path="poky/meta-distro">
-        <copyfile src="templateconf" dest="poky/.templateconf" />
-    </project>
+    <!-- upstream repos / meta layers -->
+    <project name="poky"                remote="yocto-project" revision="warrior" path="poky"/>
+    <project name="meta-openembedded"   remote="openembedded"  revision="warrior" path="chruselpoky/meta-openembedded" />
+    <project name="meta-raspberrypi"    remote="yocto-project" revision="warrior" path="chruselpoky/meta-raspberrypi"/>
+
+    <!-- my meta-layers -->
+    <project name="chrusel/meta-distro" remote="github"        revision="master"  path="chruselpoky/meta-distro" />
 </manifest>
 

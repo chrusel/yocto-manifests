@@ -10,6 +10,8 @@
     <project name="meta-raspberrypi"    remote="yocto-project" revision="warrior" path="chruselpoky/meta-raspberrypi"/>
 
     <!-- my meta-layers -->
-    <project name="chrusel/meta-distro" remote="github"        revision="master"  path="chruselpoky/meta-distro" />
+    <project name="chrusel/meta-distro" remote="github"        revision="master"  path="chruselpoky/meta-distro">
+        <copyfile src="chruselpoky-init-build-env" dest="chruselpoky/chruselpoky-init-build-env" />
+    </project>
 </manifest>
 

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-    <remote name="yocto-project" fetch="git://git.yoctoproject.org"/>
+    <remote name="github" fetch="git://github.com"/>
     <remote name="openembedded" fetch="git://git.openembedded.org"/>
-    <remote name="github" fetch="http://github.com"/>
+    <remote name="yocto-project" fetch="git://git.yoctoproject.org"/>
 
     <!-- upstream repos / meta layers -->
     <project name="poky"                remote="yocto-project" revision="warrior" path="poky"/>

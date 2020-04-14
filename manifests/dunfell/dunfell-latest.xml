@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remote name="github" fetch="git://github.com"/>
+    <remote name="openembedded" fetch="git://git.openembedded.org"/>
+    <remote name="yocto-project" fetch="git://git.yoctoproject.org"/>
+
+    <!-- upstream repos / meta layers -->
+    <project name="poky"                remote="yocto-project" revision="dunfell" path="poky"/>
+    <project name="meta-openembedded"   remote="openembedded"  revision="dunfell" path="chruselpoky/meta-openembedded" />
+    <project name="meta-raspberrypi"    remote="yocto-project" revision="dunfell" path="chruselpoky/meta-raspberrypi"/>
+
+    <!-- my meta-layers -->
+    <project name="chrusel/meta-distro" remote="github"        revision="master"  path="chruselpoky/meta-distro">
+        <copyfile src="chruselpoky-init-build-env" dest="chruselpoky/chruselpoky-init-build-env" />
+    </project>
+</manifest>
+

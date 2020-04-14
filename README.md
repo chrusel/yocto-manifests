@@ -1,5 +1,7 @@
 # 1. How To Build
 
+** ... work in progress ...**
+
 ## 1.1 Prerequisite (Ubuntu 18.04)
 
 Required Tools and Packages:
@@ -20,19 +22,20 @@ Fetch and Install repo tool:
 
     mkdir ~/yocto-rpi
     cd ~/yocto-rpi
-    repo init -u git@github.com:chrusel/yocto-manifests.git
+    repo init -u https//github.com/chrusel/yocto-manifests.git
     repo sync
 
 ## 1.3 Setup environment
 
-    cd poky
-    source oe-init-build-env
+    source chruselpoky/chruselpoky-init-build-env
 
 # 2. Bake Raspberrypi3 image
 
 ## 2.1 Trigger build engine to do so
 
-    bitbake -k core-image-sato
+    bitbake -k photobooth-image-dev
+
+    bitbake -k photobooth-image
 
 ## 2.2 Flash image
 
@@ -44,8 +47,8 @@ Fetch and Install repo tool:
 
 ## 3.1 Trigger build engine to do so
 
-    bitbake core-image-sato -c populate_sdk
+    bitbake photobooth-image-dev -c populate_sdk
 
 ## 3.2 Install SDK
 
-    ./tmp/deploy/sdk/chruselpoky-glibc-x86_64-core-image-sato-aarch64-raspberrypi3-64-toolchain-2.7.sh
+    ./tmp/deploy/sdk/chruselpoky-glibc-x86_64-photobooth-image-dev-aarch64-raspberrypi3-64-toolchain-3.1.sh

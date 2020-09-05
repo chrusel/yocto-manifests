@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remote name="github" fetch="https://github.com"/>
+    <remote name="openembedded" fetch="git://git.openembedded.org"/>
+    <remote name="yocto-project" fetch="git://git.yoctoproject.org"/>
+
+    <!-- upstream repos / meta layers -->
+    <project name="poky"                remote="yocto-project" revision="569b1f5d67c57de957e243997c53ec2f81dc8dfe" path="poky"/>
+    <project name="meta-openembedded"   remote="openembedded"  revision="654ad8bea49f142d20b2b96c0dd44810a6be233a" path="chruselpoky/meta-openembedded" />
+    <project name="meta-raspberrypi"    remote="yocto-project" revision="93305f7c3a9c338a3d2daef61514f61b4256f979" path="chruselpoky/meta-raspberrypi"/>
+
+    <!-- my meta-layers -->
+    <project name="chrusel/meta-distro" remote="github"        revision="master"  path="chruselpoky/meta-distro">
+        <copyfile src="chruselpoky-init-build-env" dest="chruselpoky/chruselpoky-init-build-env" />
+    </project>
+    <project name="chrusel/meta-photobooth" remote="github"        revision="master"  path="chruselpoky/meta-photobooth" />
+</manifest>
+

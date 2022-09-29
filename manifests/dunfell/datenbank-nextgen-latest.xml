@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remote name="github" fetch="https://github.com"/>
+    <remote name="openembedded" fetch="git://git.openembedded.org"/>
+    <remote name="yocto-project" fetch="git://git.yoctoproject.org"/>
+
+    <!-- upstream repos / meta layers -->
+    <project name="poky"                 remote="yocto-project" revision="dunfell" path="poky"/>
+    <project name="meta-openembedded"    remote="openembedded"  revision="dunfell" path="datenbank-nextgen/meta-openembedded" />
+    <project name="linux4sam/meta-atmel" remote="github"        revision="dunfell" path="datenbank-nextgen/meta-atmel"/>
+
+    <!-- my meta-layers -->
+    <project name="chrusel/meta-distro" remote="github"        revision="master"  path="datenbank-nextgen/meta-distro">
+        <copyfile src="chrusel/datenbank-nextgen-init-build-env" dest="datenbank-nextgen/chruselpoky-init-build-env" />
+    </project>
+</manifest>
